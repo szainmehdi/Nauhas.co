@@ -99,6 +99,10 @@ textarea {
 html, body {
     background: #e1e1e1 url(../img/layout/bg-body.jpg);
 }
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 header {
     width: 100%;
     margin: 0 auto;
@@ -217,14 +221,20 @@ nav a.active {
 .main-content {
     width: 920px;
     min-height: 1080px;
+    padding: 24px;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    font-family: Mplus, sans-serif;
+
 }
+.main-content p {
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
 
-
-
-
-
-
-
+}
 
 
 

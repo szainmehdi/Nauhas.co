@@ -11,7 +11,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
+        <title>Nauhakhans | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,7 +27,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <?php printSiteHeader("home"); ?>
+        <?php printSiteHeader("nauhakhans"); ?>
 
         <div class="main-wrap">
             <div class="background">
