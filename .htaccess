@@ -1,6 +1,16 @@
 # Apache Server Configs v1.1.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
+# ##############################################################################
+# # CUSTOM RULES                                                               #
+# ##############################################################################
+
+# Prepend the configuration php file to all documents
+<Files "*">
+    php_value auto_prepend_file "C:/wamp/www/zcomputers/Nauhas.co/includes/config.inc.php"
+    # php_value auto_prepend_file "/var/www/html/includes/config.inc.php"
+</Files>
+
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
@@ -235,7 +245,7 @@ AddDefaultCharset utf-8
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Option 1: rewrite www.example.com → example.com
+# Option 1: rewrite www.example.com ? example.com
 
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTPS} !=on
@@ -245,7 +255,7 @@ AddDefaultCharset utf-8
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Option 2: rewrite example.com → www.example.com
+# Option 2: rewrite example.com ? www.example.com
 
 # Be aware that the following might not be a good idea if you use "real"
 # subdomains for certain parts of your website.

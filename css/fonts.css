@@ -1,0 +1,49 @@
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-thin.ttf')
+    format("truetype");
+    font-weight: 100;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-light.ttf')
+    format("truetype");
+    font-weight: 200;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-regular.ttf')
+    format("truetype");
+    font-weight: 400;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-medium.ttf')
+    format("truetype");
+    font-weight: 600;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-bold.ttf')
+    format("truetype");
+    font-weight: 700;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-heavy.ttf')
+    format("truetype");
+    font-weight: 800;
+}
+@font-face
+{
+    font-family: Mplus;
+    src: url('fonts/mplus-1p-black.ttf')
+    format("truetype");
+    font-weight: 900;
+}

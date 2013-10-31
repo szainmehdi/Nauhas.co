@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    S. Zain Mehdi -- Creator -- http://google.com/+ZainMehdi
 
 # THANKS
 
