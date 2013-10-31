@@ -39,7 +39,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
         </header>
         <div class="main-wrap">
             <div class="background">
-
+                <div class="background-overlay"></div>
             </div>
             <div class="main-content-wrap">
                 <div class="main-content">

@@ -115,6 +115,7 @@ header {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+
 }
 #header-content {
     width: 920px;
@@ -176,7 +177,6 @@ nav a.active {
 .main-wrap {
     width: 100%;
     margin: 0 auto;
-    min-height: 1080px;
     box-sizing: border-box;
         -moz-box-sizing: border-box;
 
@@ -194,6 +194,12 @@ nav a.active {
     z-index: -2;
     top: 0;
 }
+.background-overlay {
+    background: url(../img/backgrounds/overlay.png);
+    background-size: 18px auto;
+    width: 100%;
+    height: 100%;
+}
 .main-content-wrap {
     width: 100%;
     margin: 420px auto 0 auto;
@@ -210,7 +216,7 @@ nav a.active {
 }
 .main-content {
     width: 920px;
-    min-height: 250px;
+    min-height: 1080px;
 }
 
 
