@@ -102,12 +102,15 @@ html, body {
 html, html a {
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+    transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
 }
 header {
     width: 100%;
     margin: 0 auto;
     height: 64px;
-    background-color: rgba(0,0,0,0.4);
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.8);
         -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,0.8);
         -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,0.8);
@@ -120,6 +123,25 @@ header {
         -moz-user-select: none;
         -ms-user-select: none;
 
+    overflow: hidden;
+
+}
+header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#header-content-wrap {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1001;
 }
 #header-content {
     width: 920px;
@@ -189,15 +211,13 @@ nav a.active {
     width: 100%;
     min-width: 1028px;
     height: 420px;
-    background: #777 url(../img/backgrounds/desert_hussain.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-color: #777;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    position: fixed;
-    z-index: -2;
-    top: 0;
-
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
     user-select: none;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -205,11 +225,16 @@ nav a.active {
         -moz-user-select: none;
         -ms-user-select: none;
 }
+.main-wrap .background {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+}
 .background.background-home {
-    background: #777 url(../img/backgrounds/desert_hussain.jpg) no-repeat center center;
+    background-image: url(../img/backgrounds/hussain.jpg);
 }
 .background.background-nauhakhans {
-    background: #777 url(../img/backgrounds/city.jpg) no-repeat center center;
+    background-image: url(../img/backgrounds/city.jpg);
 }
 .background-overlay {
     background: url(../img/backgrounds/overlay.png);
@@ -239,6 +264,9 @@ nav a.active {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 
+    font-family: Mplus,sans-serif;
+    font-weight: 400;
+
 }
 .main-content p {
     color: #333;
@@ -248,21 +276,22 @@ nav a.active {
 }
 .content-section {
     height: 400px;
-    font-family: Mplus,sans-serif;
-    font-weight: 400;
-}
-.content-section h2 {
-    margin: 0 0 16px 0;
-    font-weight: 200;
-    border-bottom: 1px solid #ecaa20;
-    display: inline-block;
-    padding: 2px 8px;
-    text-shadow: 0 1px rgba(255,255,255,0.5);
 
 }
-.content-section h2 strong {
+.main-content h2 {
+    margin: 0 0 16px 0;
+    font-weight: 200;
+    border-bottom: 1px solid #bbbbbb;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
+    font-size: 28px;
+    padding: 2px 0;
+
+}
+.main-content h2 strong {
     font-weight: 700;
     color: #ecaa20;
+    border-bottom: 4px solid #ecaa20;
+    padding: 0 4px;
 }
 footer {
     position: fixed;
@@ -274,7 +303,7 @@ footer {
     background-color: #777;
 }
 footer .site-logo-footer {
-    background: url(../img/artwork/nauhas_co_logo_background_small.png);
+    background: url(../img/artwork/nauhas_co_logo_transparent_small.png);
     width: 119px;
     height: 32px;
     background-size: cover;
@@ -288,7 +317,18 @@ footer p {
     font-weight: 200;
     text-align: center;
 }
-
+footer a:link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #ecaa20;
+    font-weight: 400;
+}
+footer a:hover {
+    background: #ecaa20;
+    text-decoration: none;
+    border-bottom: 1px solid #ecaa20;
+    font-weight: 400;
+}
 
 
 
@@ -300,7 +340,18 @@ footer p {
 /*
  * Image replacement
  */
-
+.full-box-link {
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index: 1000;
+    background-color:#ffffff;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity:0;
+}
 .ir {
     background-color: transparent;
     border: 0;
