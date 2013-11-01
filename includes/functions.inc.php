@@ -16,3 +16,9 @@ function printSiteHeader($page="home") {
         </div>
     </header>';
 }
+function printSiteFooter() {
+    echo '<footer>
+            <a href="index.php"><div class="site-logo-footer"></div></a>
+            <p>Copyright &copy; 2013 Z Computers. </p>
+        </footer>';
+}

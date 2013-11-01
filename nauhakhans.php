@@ -30,7 +30,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
         <?php printSiteHeader("nauhakhans"); ?>
 
         <div class="main-wrap">
-            <div class="background">
+            <div class="background background-nauhakhans">
                 <div class="background-overlay"></div>
             </div>
             <div class="main-content-wrap">
@@ -39,9 +39,8 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                 </div>
             </div>
         </div>
-        <footer>
 
-        </footer>
+        <?php printSiteFooter(); ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
