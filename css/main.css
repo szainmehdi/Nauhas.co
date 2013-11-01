@@ -235,11 +235,9 @@ nav a.active {
     width: 920px;
     min-height: 1080px;
     padding: 24px;
-
+    margin: 0 auto;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-
-    font-family: Mplus, sans-serif;
 
 }
 .main-content p {
@@ -248,7 +246,24 @@ nav a.active {
     font-weight: 400;
 
 }
+.content-section {
+    height: 400px;
+    font-family: Mplus,sans-serif;
+    font-weight: 400;
+}
+.content-section h2 {
+    margin: 0 0 16px 0;
+    font-weight: 200;
+    border-bottom: 1px solid #ecaa20;
+    display: inline-block;
+    padding: 2px 8px;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
 
+}
+.content-section h2 strong {
+    font-weight: 700;
+    color: #ecaa20;
+}
 footer {
     position: fixed;
     bottom: 0;

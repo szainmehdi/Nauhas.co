@@ -35,7 +35,12 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
             </div>
             <div class="main-content-wrap">
                 <div class="main-content">
-                    <p style="text-align: center">Site under construction.</p>
+                    <section id="top_nauhakhans" class="content-section">
+                        <h2><strong>Top</strong> Nauhakhans</h2>
+                        <div class="nauhakhan featured">
+
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
