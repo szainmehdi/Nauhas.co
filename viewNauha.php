@@ -11,7 +11,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nadeem Sarwar | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
+        <title>Ye Janaza Hai Ali Ka | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,6 +24,10 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
 
         <style type="text/css">
             /* viewNauhakhan.php styles */
+
+            .main-content-wrap {
+                margin-top: 220px;
+            }
 
             .topNauha {
                 width: 420px;
@@ -122,23 +126,79 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 
             }
+            #nauha_wrap {
+                width: 480px;
 
+                box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+
+                display: inline-block;
+                vertical-align: top;
+
+                margin-bottom: 32px;
+                position: relative;
+
+            }
+            #nauha_wrap p {
+                color: #555;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            #nauha_wrap h1 {
+
+                margin: 0;
+                padding: 2px 6px;
+                text-transform: uppercase;
+                font-weight: 200;
+                color: #fff;
+                text-shadow: 0 1px rgba(255,255,255,0.5);
+                font-size: 36px;
+                line-height: 56px;
+
+            }
+            #nauha_wrap h1 strong {
+                font-weight: 200;
+                color: #fff;
+                background-color: #ecaa20;
+                padding: 0 4px;
+            }
+            #nauha_wrap #nauha_header {
+                padding: 16px 16px 16px 16px;
+                background-color: rgba(0,0,0,0.3);
+                position: absolute;
+                top: -150px;
+                left: 0;
+                width: 872px;
+
+            }
+            #nauha_wrap #nauha_content {
+                padding: 8px 16px 16px 16px;
+                background-color: white;
+                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                     -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            #nauha_wrap #nauha_content p.indent {
+                margin-left: 24px;
+            }
             #nauhakhan-header {
-                margin-top: -180px;
-                width: 100%;
-                height: 300px;
+                width: 320px;
                 text-align: center;
                 margin-bottom: 48px;
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 48px;
             }
             #nauhakhan_details {
-                background-color: #ffffff;
+               /* background-color: #ffffff;
 
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                     -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                     -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
 
-                width: 400px;
+                width: 100%;
                 height: 150px;
                 padding: 8px;
                 margin-top: 20px;
@@ -148,7 +208,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                     -moz-box-sizing: border-box;
 
                 display: inline-block;
-                vertical-align: middle;
+                vertical-align: top;
             }
             #nauhakhan_details h1 {
                 margin: 0;
@@ -158,6 +218,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                 color: #444;
                 border-bottom: 1px solid #bbbbbb;
                 text-shadow: 0 1px rgba(255,255,255,0.5);
+                font-size: 28px;
             }
             #nauhakhan_details h1 strong {
                 color: #ecaa20;
@@ -186,7 +247,6 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                 width: 300px;
                 height: 300px;
                 padding: 8px;
-                margin-right: 48px;
 
 
                 box-sizing: border-box;
@@ -201,7 +261,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
             }
 
             .background.background-nauhakhans  {
-                background-image: url(img/backgrounds/kerbala_hussain.jpg);
+                background-image: url(img/backgrounds/imam-hussain-a-s-as-414346.jpg);
             }
             .album_wrap {
                 margin-bottom: 32px;
@@ -302,7 +362,82 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
             </div>
             <div class="main-content-wrap">
                 <div class="main-content">
-                    <div id="nauhakhan-header">
+                    <div id="nauha_wrap">
+                        <section id="nauha" class="content-section">
+                            <div id="nauha_header">
+                                <h1>Ye Janaza Hai Ali Ka <strong>2013</strong></h1>
+                            </div>
+                            <div id="nauha_content">
+                                <p>Haay Ali Maula, Haay Ali Maula<br />
+                                    Ye Janaza Hai Ali Ka, Ye Janaza Hai Ali Ka<br />
+                                    (Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka) x2<br />
+                                </p>
+                                <p class="indent">Aaj Baba Mar Gaya Hai,  Shabar-o-Shabeer Ka</p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Fatima Zehra ke marqad se sada aane lagi) x2<br />
+                                    (Hai Sada Aane Lagi)<br />
+                                    Ye Masayab reh gaya tha, kya meri taqdeer ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Ya Rasul Allah ye Jibreel ne rokar  kaha)x2<br />
+                                    (Hai Ye Rokar Kaha)<br />
+                                    Aik Halqa aur tuta noor ki zanjeer  ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka</p>
+                                <p class="indent">                (Kyu chalayi theg haider par bine muljim bata)x2<br />
+                                    (Aay Bine Muljim bata)<br />
+                                    Khatl Qura(n) Kar diya Kata Gala tafseer ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Gham Ali ki betiyo ke, phirse taza  ho gaye)x2<br />
+                                    (Hai Taza Hogaye)<br />
+                                    Gham Abhi Bhooli Kaha thi,  madar-e-dilgeer ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Nazro ne jane ali ko, kya khayal ata raha)x2<br />
+                                    (Hai Kyahal Ata Raha)<br />
+                                    Mu(nh) Kabhi Zainab Ka Dekha, Aur Kabhi Shabeer Ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka</p>
+                                <p class="indent">(Betiyo ko dekhte hai, aur rote hai  ali)x2<br />
+                                    (Hai Rote Hai Ali)<br />
+                                    Hai wo zalim tusavur, sham ki tashdeer  ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Chote se Abbas bhi ro tehe sar ko peet kar)x2<br />
+                                    (Hai Sar Ko Peet Kar)<br />
+                                    Bachpana Abbas aur Zakm Dil Par Teer Ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">(Baap Ki Mayat se Zainab ka lepatna  bar bar)x2<br />
+                                    (Hai Lepatna Bar Bar)<br />
+                                    Dil hiladeta tha rona shah ki  humsheer ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka<br />
+                                </p>
+                                <p class="indent">Aaj Baba Mar Gaya Hai, Shabar-o-Shabeer Ka<br />
+                                </p>
+                                <p>Ye Janaza Hai Ali Ka<br />
+                                    (Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka) x2</p>
+                            </div>
+                        </section>
+                    </div><!--
+                ---><div id="nauhakhan-header">
                         <div id="nauhakhan_image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg)">
                         </div>
                         <section id="nauhakhan_details" class="content-section">
@@ -316,10 +451,10 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                             </div>
                         </section>
                     </div>
-                    <h2><strong>Top</strong> Nauhas</h2>
+                    <h2><strong>Similar</strong> Nauhas</h2>
                         <section id="top_nauhas" class="content-section">
                             <div class="topNauha">
-                                <a href="viewNauha.php" class="full-box-link"></a>
+                                <a href="#" class="full-box-link"></a>
                                 <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);"></div><!--
                             ---><div class="nauha-heading">
                                     <span class="nauha-title">Ye Janaza Hai Ali Ka</span>
@@ -385,73 +520,13 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                                 </div>
                             </div>
                         </section>
-                    <h2><strong>All</strong> Nauhas</h2>
+                    <h2>In This <strong>Album</strong></h2>
                         <section id="all_nauhas" class="content-section">
                             <div class="album_wrap">
                                 <div class="album_artwork" style="background-image: url(img/nauhakhans/nadeem_sarwar/nadeem13.jpg)"></div><!--
                             ---><div class="album_content">
                                     <div class="album_heading">
                                         <h3><strong>2013</strong>Chaley Aao Aey Zawaro</h3>
-                                        <span>Winter 2012-2013 &middot; Muharram 1432 A.H.</span>
-                                    </div>
-                                    <div class="album_tracklist">
-                                        <div class="album_track">
-                                            <span class="track_number">1</span>
-                                            <span class="track_name">Chaley Aao Aey Zawaro</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">2</span>
-                                            <span class="track_name">Darya Behta Raha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">3</span>
-                                            <span class="track_name">Aey Alam Afrashtey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">4</span>
-                                            <span class="track_name">Ya Ali</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">5</span>
-                                            <span class="track_name">Muhammad Hamarey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">6</span>
-                                            <span class="track_name">Shaam-e-Ghareeban Mein Haram</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">7</span>
-                                            <span class="track_name">Main Hussain Hoon</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">8</span>
-                                            <span class="track_name">Ahista Chacha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">9</span>
-                                            <span class="track_name">Ana Ali ibn-ul-Hussain</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">10</span>
-                                            <span class="track_name">Mohnjy Naukri</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">11</span>
-                                            <span class="track_name">Baraye Dil-e-Dukhtar</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">12</span>
-                                            <span class="track_name">Aey Madina Ghazab Ho Gaya</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="album_wrap">
-                                <div class="album_artwork" style="background-image: url(img/nauhakhans/nadeem_sarwar/cd2012.jpg)"></div><!--
-                            ---><div class="album_content">
-                                    <div class="album_heading">
-                                        <h3><strong>2012</strong>Abad Wallah Ya Zahra</h3>
                                         <span>Winter 2012-2013 &middot; Muharram 1432 A.H.</span>
                                     </div>
                                     <div class="album_tracklist">
