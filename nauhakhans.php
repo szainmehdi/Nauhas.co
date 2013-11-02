@@ -24,7 +24,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
+        <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -38,137 +38,31 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                 <div class="main-content">
                     <h2><strong>Top</strong> Nauhakhans</h2>
                         <section id="top_nauhakhans" class="content-section">
-                            <div class="nauhakhan featured">
-                                <a href="viewNauhakhan.php?n=Nadeem+Sarwar" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div>
-                                <div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Nadeem Sarwar</span>
-                                    <div class="nauhakhan-description-preview">
-                                        <?php
-                                            echo strip_tags('<strong>Syed Nadeem Raza Sarwar Rizvi</strong>&nbsp;is a&nbsp;
-                                            <a href="http://en.wikipedia.org/wiki/Shia" title="Shia">Shia</a>&nbsp;
-                                            <a href="http://en.wikipedia.org/wiki/Pakistan" title="Pakistan">Pakistani</a>
-                                            &nbsp;<a href="http://en.wikipedia.org/wiki/Noha" title="Noha">Noha </a>reciter.
-                                             He is well known in the Shia community and is considered the best Noha Khwaan
-                                             (Noha reciter) of present because of his unique style of recitation.&nbsp;He
-                                             rose to fame in the 1980s when his Nohas gained popularity overseas. Since
-                                             then he has recited several hundred Nohas all over the world wherever a Shia
-                                             population exists. He has also released recorded collections of 7 to 10 Nohas
-                                              every year since 1980 and has published many books of his Nohas.&nbsp;He has
-                                              hitherto released 30 albums of Nauha Cassette and CDs from 1980 - 2012. Though
-                                               he mostly recites in&nbsp;<a href="http://en.wikipedia.org/wiki/Urdu"
-                                               title="Urdu">Urdu</a>, he has also recited in languages such as Sindhi,
-                                               Sariki, Punjabi, Pushto, Pourbi, Hindi, Gujarati, Persian, Arabic, English,
-                                               and French. He is very popular among the youth with many copying his style
-                                               to be similarly popular and some of them have seen success. His collections
-                                               of Nohas are very popular during the Islamic month of&nbsp;
-                                               <a href="http://en.wikipedia.org/wiki/Muharram" title="Muharram">Muharram</a>
-                                               &nbsp;when his Nohas are listened to and recited by many. He has collaborated
-                                                several times with the famous Pakistani Poet&nbsp;
-                                                <a href="http://en.wikipedia.org/wiki/Rehan_Azmi" title="Rehan Azmi">
-                                                Rehan Azmi</a>. Most of the Nohas recited by him are "Kalaam."');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan featured">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(http://nauhas.co/images/nauhakhans/irfan-haider/irfan_haider_large.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div>
-                                <div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Irfan Haider</span>
-                                    <div class="nauhakhan-description-preview">
-                                        <?php
-                                        echo strip_tags('<p> <strong>Syed Irfan Haider Rizvi</strong>, a prominent emerging
-                                        Nauhakhan in the Shia Pakistani community. He started Nauhakhani at a very early age
-                                         and has gained popularity with his anjuman called Karawan-e-Aza. His nauhas have
-                                         gained a large fanbase within the Pakistani youth. </p>');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan featured">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_ali_safdar.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div>
-                                <div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Ali Safdar</span>
-                                    <div class="nauhakhan-description-preview">
-                                        <?php
-                                        echo strip_tags('No description found.');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan featured">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_farhan_ali.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div>
-                                <div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Farhan Ali</span>
-                                    <div class="nauhakhan-description-preview">
-                                        <?php
-                                        echo strip_tags('Anjuman Zarb-e-Haideri, Karachi, Pakistan');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            $output = array();
+                            foreach($db->get("nauhakhans","id",4) as $nkid) {
+                                $nauhakhan = Nauhakhan::get("id",$nkid['id']);
+                                $args = $nauhakhan->toArray();
+                                $args['description'] = strip_tags($args['description'], "<strong><em>");
+                                array_push($output, dsprintf(Nauhakhan::FORMAT_TOPNAUHAKHANS, $args));
+                            }
+                            echo implode("<!-- -->", $output);
+
+                            ?>
                         </section>
                     <h2><strong>All</strong> Nauhakhans</h2>
                         <section id="all_nauhakhans" class="content-section">
-                            <div class="nauhakhan small">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div><!---
-                            ---><div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Nadeem Sarwar</span>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan small">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(http://nauhas.co/images/nauhakhans/irfan-haider/irfan_haider_large.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div><!---
-                            ---><div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Irfan Haider</span>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan small">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_ali_safdar.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div><!---
-                            ---><div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Ali Safdar</span>
-                                </div>
-                            </div><!--
-                        ---><div class="nauhakhan small">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_farhan_ali.jpg);">
-                                    <div class="nauhakhan-image-overlay"></div>
-                                    <img src="" />
-                                </div><!--
-                            ---><div class="nauhakhan-content">
-                                    <span class="nauhakhan-name">Farhan Ali</span>
-                                </div>
-                            </div>
+                            <?php
+                            $output = array();
+                            foreach($db->orderBy("name")->get("nauhakhans","id") as $nkid) {
+                                $nauhakhan = Nauhakhan::get("id",$nkid['id']);
+                                $args = $nauhakhan->toArray();
+                                $args['description'] = strip_tags($args['description'], "<strong><em>");
+                                array_push($output, dsprintf(Nauhakhan::FORMAT_SMALL_CARD, $args));
+                            }
+                            echo implode("<!-- -->", $output);
+
+                            ?>
                         </section>
                 </div>
             </div>

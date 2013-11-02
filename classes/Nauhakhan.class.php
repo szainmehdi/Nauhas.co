@@ -22,7 +22,31 @@ class Nauhakhan {
     public $tags;            //Last Update Timestamp
 
     const TABLE = "nauhakhans";
+    const FORMAT_TOPNAUHAKHANS = '
+    <div class="nauhakhan featured">
+        <a href="viewNauhakhan.php?n=%(urlname)s" class="full-box-link"></a>
+        <div class="nauhakhan-image" style="background-image: url(%(image)s);">
+            <div class="nauhakhan-image-overlay"></div>
+        </div>
+        <div class="nauhakhan-content">
+            <span class="nauhakhan-name">%(name)s</span>
+            <div class="nauhakhan-description-preview">
+                %(description)s
+                <div class="fade"></div>
+            </div>
+        </div>
+    </div>';
 
+    const FORMAT_SMALL_CARD = '
+    <div class="nauhakhan small">
+        <a href="viewNauhakhan.php?n=%(urlname)s" class="full-box-link"></a>
+        <div class="nauhakhan-image" style="background-image: url(%(image)s);">
+            <div class="nauhakhan-image-overlay"></div>
+        </div><!---
+    ---><div class="nauhakhan-content">
+            <span class="nauhakhan-name">%(name)s</span>
+        </div>
+    </div>';
 
     //Default Constructor
     function __construct($data) {
@@ -107,5 +131,22 @@ class Nauhakhan {
         $name = explode(" ", $this->name);
         $count = count($name);
         return ($count>0) ? $name[$count-1] : false;
+    }
+    public function getUrlName() {
+        return urlencode($this->name);
+    }
+
+    public function toArray() {
+        return array(
+            "name" => $this->name,
+            "description" => $this->description,
+            "links" => $this->links,
+            "images" => $this->images,
+            "tags" => $this->tags,
+            "image" => $this->getImage(),
+            "fname" => $this->getFirstName(),
+            "lname" => $this->getLastName(),
+            "urlname" => $this->getUrlName()
+        );
     }
 }
