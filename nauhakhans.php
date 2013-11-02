@@ -39,7 +39,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
                     <h2><strong>Top</strong> Nauhakhans</h2>
                         <section id="top_nauhakhans" class="content-section">
                             <div class="nauhakhan featured">
-                                <a href="viewNauhakhan.php" class="full-box-link"></a>
+                                <a href="viewNauhakhan.php?n=Nadeem+Sarwar" class="full-box-link"></a>
                                 <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);">
                                     <div class="nauhakhan-image-overlay"></div>
                                     <img src="" />

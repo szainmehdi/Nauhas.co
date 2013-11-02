@@ -2,6 +2,19 @@
 
 require_once($cfg['root_dir'] . "includes/global.inc.php");
 
+if(!isset($_GET['n'])) {
+    header("Location: nauhakhans.php");
+    exit();
+}
+else {
+    $n = $_GET['n'];
+    $nauhakhan = Nauhakhan::get("name",$n);
+    if(!$nauhakhan) {
+        header("Location: nauhakhans.php");
+        exit();
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -11,7 +24,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nadeem Sarwar | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
+        <title><?=$nauhakhan->name?> | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -303,10 +316,10 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
             <div class="main-content-wrap">
                 <div class="main-content">
                     <div id="nauhakhan-header">
-                        <div id="nauhakhan_image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg)">
+                        <div id="nauhakhan_image" style="background-image: url(<?=$nauhakhan->getImage()?>)">
                         </div>
                         <section id="nauhakhan_details" class="content-section">
-                            <h1>Nadeem <strong>Sarwar</strong></h1>
+                            <h1><?=$nauhakhan->getFirstName()?> <strong><?=$nauhakhan->getLastName()?></strong></h1>
                             <div id="nauhakhan-links">
                                 <a class="nauhakhan-links" href="#"><img src="img/icons/long-shadow-social/32/Facebook.png" /></a>
                                 <a class="nauhakhan-links" href="#"><img src="img/icons/long-shadow-social/32/Google-plus.png" /></a>
