@@ -156,11 +156,14 @@ else {
                     <h2><strong>Top</strong> Nauhas</h2>
                         <section id="top_nauhas" class="content-section">
                             <?php
+                            $out = array();
                             foreach($db->where("nauhakhan",$nauhakhan->id)->orderBy("title")->get(Nauha::TABLE,"*",2) as $data) {
                                 $nauha = new Nauha($data);
                                 $printData = $nauha->toArray();
-                                echo dsprintf(Nauha::FORMAT_FEATURED, $printData);
+                                $out[] =  dsprintf(Nauha::FORMAT_FEATURED, $printData);
                             }
+                            echo implode("<!-- -->", $out);
+
                             ?>
                         </section>
                     <h2><strong>All</strong> Nauhas</h2>

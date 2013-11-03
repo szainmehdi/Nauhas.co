@@ -1,0 +1,56 @@
+.player {
+
+}
+.player .rr,.player  .ff {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin: 0 16px;
+
+    background-repeat: no-repeat;
+    background-image: url(player.png);
+    background-size: auto 64px;
+    opacity: 0.7;
+}
+.player .rr {
+    background-position: left bottom;
+}
+.player .rr:hover {
+    opacity: 1.0;
+}
+.player .rr:active {
+    background-position: left top;
+}
+.player .ff {
+    background-position: right bottom;
+}
+.player .ff:hover {
+    opacity: 1.0;
+}
+.player .ff:active {
+    background-position: right top;
+}
+.player  .play, .player  .pause {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: 48px;
+
+    background-repeat: no-repeat;
+    background-image: url(player.png);
+    background-size: auto 96px;
+    opacity: 0.7;
+}
+.player .play, .player .pause:active {
+    background-position: center bottom;
+}
+.player .play:hover {
+    opacity: 1.0;
+}
+.player .pause, .player .play:active {
+    background-position: center top;
+}
+.player .pause:hover {
+    opacity: 1.0;
+}

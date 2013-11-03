@@ -28,9 +28,8 @@ class Nauha {
 
     const ERROR_NO_WRITEUP = "<p class='err'>No writeup available for this nauha.</p>";
 
-    const FORMAT_FEATURED = '
-    <div class="topNauha">
-        <a href="#" class="full-box-link"></a>
+    const FORMAT_FEATURED = '<div class="topNauha">
+        <a href="viewNauha.php?n=%(urlname)s" class="full-box-link"></a>
         <div class="nauhakhan-image" style="background-image: url(%(nauhakhan_image)s);"></div><!--
     ---><div class="nauha-heading">
             <span class="nauha-title">%(title)s</span>
@@ -45,8 +44,7 @@ class Nauha {
                 <div class="fade"></div>
             </div>
         </div>
-    </div>
-    ';
+    </div>';
 
     //Default Constructor
     function __construct($data) {
@@ -94,7 +92,7 @@ class Nauha {
         //set the data array
         $data = array(
             "album" => (int)$this->album,
-            "nauhakhan" => (int)$this->nauhakhan,
+            "nauhakhan" => (int)$this->nauhakhan->id,
             "title" => (string)$this->title,
             "text" => (string)$this->text,
             "audio" => (string)implode("|",$this->audio),
@@ -121,6 +119,10 @@ class Nauha {
             if($db->update(self::TABLE, $data)) {return true; } //successfully tags new nauha
             else { return false; } //Failed to update new nauha
         }
+    }
+
+    public function getMP3() {
+        return (isset($this->audio[0])) ? $this->audio[0] : false;
     }
     public static function get($field,$value) {
         $db = new Database();

@@ -60,7 +60,8 @@ class NauhaAlbum {
         $this->artwork = (isset($data['artwork'])) ? $data['artwork'] : false;
         $this->notes = (isset($data['notes'])) ? $data['notes'] : false;
 
-        $this->tracklist = Nauha::getTracksByAlbum($this->id);
+
+        $this->tracklist = (isset($data['id'])) ? Nauha::getTracksByAlbum($this->id) : false;
 
         $this->created = (isset($data['created'])) ? strtotime($data['created']) : 0;
 
@@ -94,7 +95,7 @@ class NauhaAlbum {
         $data = array(
             "title" => (string)$this->title,
             "nauhakhan" => (int)$this->nauhakhan->id,
-            "releaseDate" => (int)$this->releaseDate,
+            "releaseDate" => (string)date("Y-m-d",$this->releaseDate),
             "year_hijri" => (int)$this->year_hijri,
             "year_gregorian" => (int)$this->year_gregorian,
             "artwork" => (string)$this->artwork,

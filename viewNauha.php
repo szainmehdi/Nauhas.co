@@ -36,6 +36,10 @@ else {
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/NauhaAlbum.css">
         <link rel="stylesheet" href="css/Nauha.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="js/player/jquery.playerHTML5.css">
+        <script src="js/player/jquery.playerHTML5.js"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         <style type="text/css">
@@ -90,6 +94,7 @@ else {
                 width: 872px;
 
             }
+
             #nauha_wrap #nauha_content {
                 padding: 8px 16px 16px 16px;
                 background-color: white;
@@ -183,6 +188,24 @@ else {
                 background-image: url(img/backgrounds/imam-hussain-a-s-as-414346.jpg);
             }
 
+            /* AUDIO PLAYER */
+            #nauha_wrap #nauha_audio {
+                padding: 16px;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+                text-align: center;
+
+                margin-bottom: 16px;
+            }
+            #nauha_wrap #nauha_audio audio {
+                display: none;
+            }
+
+
         </style>
     </head>
     <body>
@@ -203,6 +226,20 @@ else {
                             <div id="nauha_header">
                                 <h1><?=$nauha->title?> <strong><?=$album->year_gregorian?></strong></h1>
                             </div>
+                            <?php
+                            if($nauha->getMP3()) {
+                            ?>
+                            <div id="nauha_audio">
+                                <audio src="<?=$nauha->getMP3()?>" preload="auto" controls>
+                                    <p class="err">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                                </audio>
+                                <div class="player">
+                                    <a href="#" class="rr"></a>
+                                    <a href="#" class="play"></a>
+                                    <a href="#" class="ff"></a>
+                                </div>
+                            </div>
+                            <?php } ?>
                             <div id="nauha_content">
                                 <?php
                                 echo (strlen($nauha->text)>0) ? $nauha->text : Nauha::ERROR_NO_WRITEUP;
