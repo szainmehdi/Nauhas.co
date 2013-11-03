@@ -1,0 +1,87 @@
+.album_wrap {
+    margin-bottom: 32px;
+}
+.album_wrap .album_artwork {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+    display: inline-block;
+    vertical-align: top;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.album_wrap .album_content {
+    width: 648px;
+    margin-left: 24px;
+    display: inline-block;
+    vertical-align: top;
+}
+.album_wrap .album_heading {
+    margin-bottom: 16px;
+}
+.album_wrap .album_heading h3 {
+    font-size: 24px;
+    padding: 2px 0;
+    margin: 0;
+    font-weight: 200;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
+}
+.album_wrap .album_heading h3 strong {
+    background: #ecaa20;
+    color: white;
+    font-weight: 700;
+    margin-right: 8px;
+    padding: 0 6px;
+}
+.album_wrap .album_heading span {
+    color: #777;
+    font-size: 12px;
+    margin: 8px 0 16px 0;
+}
+.album_wrap .album_tracklist .album_track {
+    width: 85%;
+    margin-bottom: 6px;
+    padding: 8px;
+    color: #555;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
+
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    display: block;
+    text-decoration: none;
+}
+.album_wrap .album_tracklist .album_track:hover {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.album_wrap .album_tracklist .album_track:active {
+    background: #fff;
+    box-shadow: inset 1px 1px 2px rgb(236, 170, 32);/*
+                    -moz-box-shadow: 0 2px 4px rgb(236, 170, 32);
+                    -ms-box-shadow: 0 2px 4px rgb(236, 170, 32);
+                    -webkit-box-shadow: 0 2px 4px rgb(236, 170, 32);*/
+}
+.album_wrap .album_tracklist .album_track .track_number {
+    color: #999;
+    margin-right: 8px;
+}

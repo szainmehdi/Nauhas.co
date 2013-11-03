@@ -33,108 +33,14 @@ else {
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/NauhaAlbum.css">
+        <link rel="stylesheet" href="css/Nauha.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         <style type="text/css">
             /* viewNauhakhan.php styles */
 
-            .topNauha {
-                width: 420px;
-                height: 276px;
-                margin: 8px;
-                padding: 8px;
-                display: inline-block;
-                vertical-align: top;
-                overflow: hidden;
-                position: relative;
-                background: white;
 
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-                transition-duration: 0.2s;
-                    -webkit-transition-duration: 0.2s;
-                    -moz-transition-duration: 0.2s;
-
-                box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-            }
-            .topNauha .nauhakhan-image {
-                width: 64px;
-                height: 64px;
-
-                background-size: cover;
-                background-position: center;
-                margin: 8px;;
-
-                display: inline-block;
-                vertical-align: middle;
-
-                border: 1px solid #eee;
-
-                border-radius: 2px;
-                    -moz-border-radius: 2px;
-                box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-            }
-            .topNauha .nauha-heading {
-                display: inline-block;
-                font-weight: 600;
-                font-size: 18px;
-                width: 324px;;
-                margin-bottom: 6px;
-
-                vertical-align: middle;
-                box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-
-                padding: 8px;
-            }
-            .topNauha .nauha-title {
-                display: block;
-            }
-            .topNauha .nauha-details {
-                color: #777;
-                font-size: 12px;
-                display: block;
-            }
-            .topNauha .nauha-details .nauha-nauhakhan {
-                color: #ecaa20;
-                font-weight: 600;
-            }
-            .topNauha .nauha-content {
-                height: 180px;
-                overflow: hidden;
-                color: #555;
-                font-size: 14px;
-                position: relative;
-
-            }
-            .topNauha .nauha-content .fade {
-                height: 64px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-
-                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,1) 100%); /* W3C */
-                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.65)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,1) 100%); /* IE10+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-            }
-            .topNauha:hover {
-                box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-                    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-                    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-
-            }
 
             #nauhakhan-header {
                 margin-top: -180px;
@@ -216,90 +122,7 @@ else {
             .background.background-nauhakhans  {
                 background-image: url(img/backgrounds/kerbala_hussain.jpg);
             }
-            .album_wrap {
-                margin-bottom: 32px;
-            }
-            .album_wrap .album_artwork {
-                width: 200px;
-                height: 200px;
-                background-color: #ffffff;
 
-                box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-
-                display: inline-block;
-                vertical-align: top;
-
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            .album_wrap .album_content {
-                width: 648px;
-                margin-left: 24px;
-                display: inline-block;
-                vertical-align: top;
-            }
-            .album_wrap .album_heading {
-                margin-bottom: 16px;
-            }
-            .album_wrap .album_heading h3 {
-                font-size: 24px;
-                padding: 2px 0;
-                margin: 0;
-                font-weight: 200;
-                text-shadow: 0 1px rgba(255,255,255,0.5);
-            }
-            .album_wrap .album_heading h3 strong {
-                background: #ecaa20;
-                color: white;
-                font-weight: 700;
-                margin-right: 8px;
-                padding: 0 6px;
-            }
-            .album_wrap .album_heading span {
-                color: #777;
-                font-size: 12px;
-                margin: 8px 0 16px 0;
-            }
-            .album_wrap .album_tracklist .album_track {
-                width: 85%;
-                margin-bottom: 6px;
-                padding: 8px;
-                color: #555;
-                text-shadow: 0 1px rgba(255,255,255,0.5);
-
-                transition-duration: 0.2s;
-                    -webkit-transition-duration: 0.2s;
-                    -moz-transition-duration: 0.2s;
-
-                cursor: pointer;
-
-                user-select: none;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-            }
-            .album_wrap .album_tracklist .album_track:hover {
-                background: #fff;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .album_wrap .album_tracklist .album_track:active {
-                background: #fff;
-                box-shadow: inset 1px 1px 2px rgb(236, 170, 32);/*
-                    -moz-box-shadow: 0 2px 4px rgb(236, 170, 32);
-                    -ms-box-shadow: 0 2px 4px rgb(236, 170, 32);
-                    -webkit-box-shadow: 0 2px 4px rgb(236, 170, 32);*/
-            }
-            .album_wrap .album_tracklist .album_track .track_number {
-                color: #999;
-                margin-right: 8px;
-            }
         </style>
     </head>
     <body>
@@ -329,198 +152,36 @@ else {
                             </div>
                         </section>
                     </div>
+                    <?php if($nauhakhan->countNauhas()>0) { ?>
                     <h2><strong>Top</strong> Nauhas</h2>
                         <section id="top_nauhas" class="content-section">
-                            <div class="topNauha">
-                                <a href="viewNauha.php" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);"></div><!--
-                            ---><div class="nauha-heading">
-                                    <span class="nauha-title">Ye Janaza Hai Ali Ka</span>
-                                    <span class="nauha-details">
-                                        <span class="nauha-nauhakhan">Nadeem Sarwar</span> &middot;
-                                        <span class="nauha-release-year">2012</span>
-                                    </span>
-                                </div>
-
-                                <div class="nauha-content">
-                                    <div class="nauha-preview">
-                                        <?php
-                                            echo strip_tags('Haay Ali Maula, Haay Ali Maula
-                                        Ye Janaza Hai Ali Ka, Ye Janaza Hai Ali Ka
-                                        (Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka) x2
-                                        Aaj Baba Mar Gaya Hai, Shabar-o-Shabeer Ka
-                                        Ye Janaza Hai Ali Ka
-                                        Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka
-                                        (Fatima Zehra ke marqad se sada aane lagi) x2
-                                        (Hai Sada Aane Lagi)
-                                        Ye Masayab reh gaya tha, kya meri taqdeer ka
-                                        Ye Janaza Hai Ali Ka
-                                        Ye Janaza Hai Ali Ka, Shah-e-Khaybar Geer Ka, Ye Janaza Hai Ali Ka
-                                        (Ya Rasul Allah ye Jibreel ne rokar kaha)x2
-                                        (Hai Ye Rokar Kaha)
-                                        Aik Halqa aur tuta noor ki zanjeer ka');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div><!--
-                        ---><div class="topNauha">
-                                <a href="#" class="full-box-link"></a>
-                                <div class="nauhakhan-image" style="background-image: url(img/nauhakhans/nauhakhan_nadeem_sarwar.jpg);"></div><!--
-                            ---><div class="nauha-heading">
-                                    <span class="nauha-title">Abad Wallah Ya Zahra</span>
-                                    <span class="nauha-details">
-                                        <span class="nauha-nauhakhan">Nadeem Sarwar</span> &middot;
-                                        <span class="nauha-release-year">2012</span>
-                                    </span>
-                                </div><!--
-                            ---><div class="nauha-content">
-                                    <div class="nauha-preview">
-                                        <?php
-                                        echo strip_tags('(Hussain, Hussain)x5
-                                            Wada Hai Hamara, Ya Fatima Zahra(x2)
-                                            Nahi Bhoolenge Hussiana(x2)
-                                            Wada Hai Hamara, Ya Fatima Zahra(x2)
-                                            Nahi Bhoolenge Hussiana(x3)
-                                            Usne Humko Na Bhoolaya, Humne Usko Na Bhoolaya(x2)
-                                            Abad Wallah Ya Zahra,  Mayin Sa Hussaina(x3)
-                                            Wada Hai ye Wallah, Ya Fatima Zehra
-                                            Wada Hai Hamara, Ya Fatima Zahra(x2)
-                                            Nahi Bhoolenge Hussiana(x2)
-                                            Kasam Allah Ki wo jisne Hamai(n) khalq kiya
-                                            Aur hume Karbobala ke liye Maqsoos Kiya
-                                            Hum Wohi Log Hai Wallah Dua-e-Zehra
-                                            Usne Halmin jo kaha La sirnian surna
-                                            Hamne Labaik Kaha');
-                                        ?>
-                                        <div class="fade"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            foreach($db->where("nauhakhan",$nauhakhan->id)->orderBy("title")->get(Nauha::TABLE,"*",2) as $data) {
+                                $nauha = new Nauha($data);
+                                $printData = $nauha->toArray();
+                                echo dsprintf(Nauha::FORMAT_FEATURED, $printData);
+                            }
+                            ?>
                         </section>
                     <h2><strong>All</strong> Nauhas</h2>
                         <section id="all_nauhas" class="content-section">
-                            <div class="album_wrap">
-                                <div class="album_artwork" style="background-image: url(img/nauhakhans/nadeem_sarwar/nadeem13.jpg)"></div><!--
-                            ---><div class="album_content">
-                                    <div class="album_heading">
-                                        <h3><strong>2013</strong>Chaley Aao Aey Zawaro</h3>
-                                        <span>Winter 2012-2013 &middot; Muharram 1432 A.H.</span>
-                                    </div>
-                                    <div class="album_tracklist">
-                                        <div class="album_track">
-                                            <span class="track_number">1</span>
-                                            <span class="track_name">Chaley Aao Aey Zawaro</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">2</span>
-                                            <span class="track_name">Darya Behta Raha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">3</span>
-                                            <span class="track_name">Aey Alam Afrashtey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">4</span>
-                                            <span class="track_name">Ya Ali</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">5</span>
-                                            <span class="track_name">Muhammad Hamarey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">6</span>
-                                            <span class="track_name">Shaam-e-Ghareeban Mein Haram</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">7</span>
-                                            <span class="track_name">Main Hussain Hoon</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">8</span>
-                                            <span class="track_name">Ahista Chacha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">9</span>
-                                            <span class="track_name">Ana Ali ibn-ul-Hussain</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">10</span>
-                                            <span class="track_name">Mohnjy Naukri</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">11</span>
-                                            <span class="track_name">Baraye Dil-e-Dukhtar</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">12</span>
-                                            <span class="track_name">Aey Madina Ghazab Ho Gaya</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="album_wrap">
-                                <div class="album_artwork" style="background-image: url(img/nauhakhans/nadeem_sarwar/cd2012.jpg)"></div><!--
-                            ---><div class="album_content">
-                                    <div class="album_heading">
-                                        <h3><strong>2012</strong>Abad Wallah Ya Zahra</h3>
-                                        <span>Winter 2012-2013 &middot; Muharram 1432 A.H.</span>
-                                    </div>
-                                    <div class="album_tracklist">
-                                        <div class="album_track">
-                                            <span class="track_number">1</span>
-                                            <span class="track_name">Chaley Aao Aey Zawaro</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">2</span>
-                                            <span class="track_name">Darya Behta Raha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">3</span>
-                                            <span class="track_name">Aey Alam Afrashtey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">4</span>
-                                            <span class="track_name">Ya Ali</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">5</span>
-                                            <span class="track_name">Muhammad Hamarey</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">6</span>
-                                            <span class="track_name">Shaam-e-Ghareeban Mein Haram</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">7</span>
-                                            <span class="track_name">Main Hussain Hoon</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">8</span>
-                                            <span class="track_name">Ahista Chacha</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">9</span>
-                                            <span class="track_name">Ana Ali ibn-ul-Hussain</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">10</span>
-                                            <span class="track_name">Mohnjy Naukri</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">11</span>
-                                            <span class="track_name">Baraye Dil-e-Dukhtar</span>
-                                        </div>
-                                        <div class="album_track">
-                                            <span class="track_number">12</span>
-                                            <span class="track_name">Aey Madina Ghazab Ho Gaya</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            $count = 0;
+                            foreach($db->where("nauhakhan",$nauhakhan->id)->orderBy("releaseDate")->get(NauhaAlbum::TABLE) as $data) {
+                                $album = new NauhaAlbum($data);
+                                $printData = $album->toArray();
+                                $printData['tracks'] = $album->formatTracklist(NauhaAlbum::FORMAT_FULL_TRACKLIST);
+                                $printData['releaseDate'] = date("F j, Y", $printData['releaseDate']);
+                                echo dsprintf(NauhaAlbum::FORMAT_FULL, $printData);
+                                $count++;
+                            }
+                            ?>
                         </section>
+                    <?php }
+                    else {
+                      echo "<p class='err'>We have no nauhas for " . $nauhakhan->name . "</p>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>

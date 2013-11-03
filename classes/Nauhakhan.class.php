@@ -135,6 +135,14 @@ class Nauhakhan {
     public function getUrlName() {
         return urlencode($this->name);
     }
+    public function countNauhas() {
+        $db = new Database();
+        return count($db->where("nauhakhan",$this->id)->get(Nauha::TABLE));
+    }
+    public function countAlbums() {
+        $db = new Database();
+        return count($db->where("nauhakhan",$this->id)->get(NauhaAlbum::TABLE));
+    }
 
     public function toArray() {
         return array(

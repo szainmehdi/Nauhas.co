@@ -7,5 +7,7 @@ date_default_timezone_set("America/Los_Angeles");
 require_once $cfg['root_dir'] . "/classes/Database.class.php";
 require_once $cfg['root_dir'] . "/classes/User.class.php";
 require_once $cfg['root_dir'] . "/classes/Nauhakhan.class.php";
+require_once $cfg['root_dir'] . "/classes/NauhaAlbum.class.php";
+require_once $cfg['root_dir'] . "/classes/Nauha.class.php";
 
 $db = new Database();
