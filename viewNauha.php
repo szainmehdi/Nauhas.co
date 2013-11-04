@@ -67,32 +67,46 @@ else {
                 font-size: 16px;
                 font-weight: 400;
             }
-            #nauha_wrap h1 {
+            #nauha_header h1 {
 
                 margin: 0;
                 padding: 2px 6px;
                 text-transform: uppercase;
                 font-weight: 200;
-                color: #fff;
+                color: #777;
                 text-shadow: 0 1px rgba(255,255,255,0.5);
                 font-size: 36px;
                 line-height: 56px;
 
             }
-            #nauha_wrap h1 strong {
+            #nauha_header h1 strong {
                 font-weight: 200;
                 color: #fff;
                 background-color: #ecaa20;
                 padding: 0 4px;
             }
-            #nauha_wrap #nauha_header {
+            /*#nauha_wrap #nauha_header {
                 padding: 16px 16px 16px 16px;
                 background-color: rgba(0,0,0,0.3);
                 position: absolute;
                 top: -150px;
                 left: 0;
                 width: 872px;
+                box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+            }*/
 
+            #nauha_header {
+                padding: 16px 16px 16px 16px;
+                background-color: #fff;
+                width: 100%;
+                box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                margin-bottom: 24px;
             }
 
             #nauha_wrap #nauha_content {
@@ -221,11 +235,11 @@ else {
             </div>
             <div class="main-content-wrap">
                 <div class="main-content">
+                    <div id="nauha_header">
+                        <h1><?=$nauha->title?> <strong><?=$album->year_gregorian?></strong></h1>
+                    </div>
                     <div id="nauha_wrap">
                         <section id="nauha" class="content-section">
-                            <div id="nauha_header">
-                                <h1><?=$nauha->title?> <strong><?=$album->year_gregorian?></strong></h1>
-                            </div>
                             <?php
                             if($nauha->getMP3()) {
                             ?>
