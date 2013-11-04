@@ -72,6 +72,9 @@
     position: relative;
 
 }
+.topNauha .nauha-preview p {
+    font-size: 14px;
+}
 .topNauha .nauha-content .fade {
     height: 64px;
     position: absolute;
