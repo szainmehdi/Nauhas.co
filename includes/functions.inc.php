@@ -12,7 +12,6 @@ function printSiteHeader($page="home") {
                 <nav>
                     <a href="index.php"'; if($page=="home") echo ' class="active"'; echo '>Home</a>
                     <a href="nauhakhans.php"'; if($page=="nauhakhans") echo ' class="active"'; echo '>Nauhakhans</a>
-                    <a href="nauhas.php"'; if($page=="nauhas") echo ' class="active"'; echo '>Submit Nauhas</a>
                 </nav>';echo '
             </div>
         </div>
