@@ -7,8 +7,8 @@
 
 # Prepend the configuration php file to all documents
 <Files "*">
-#    php_value auto_prepend_file "C:/wamp/www/zcomputers/Nauhas.co/includes/config.inc.php"
-    php_value auto_prepend_file "/var/www/html/includes/config.inc.php"
+    php_value auto_prepend_file "C:/wamp/www/zcomputers/Nauhas.co/includes/config.inc.php"
+#    php_value auto_prepend_file "/var/www/html/www.nauhas.co/includes/config.inc.php"
 </Files>
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
