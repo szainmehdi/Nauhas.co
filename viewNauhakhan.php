@@ -157,7 +157,7 @@ else {
                         <section id="top_nauhas" class="content-section">
                             <?php
                             $out = array();
-                            foreach($db->where("nauhakhan",$nauhakhan->id)->orderBy("title")->get(Nauha::TABLE,"*",2) as $data) {
+                            foreach($db->where("nauhakhan",$nauhakhan->id)->orderBy("updated")->get(Nauha::TABLE,"*",2) as $data) {
                                 $nauha = new Nauha($data);
                                 $printData = $nauha->toArray();
                                 $out[] =  dsprintf(Nauha::FORMAT_FEATURED, $printData);
