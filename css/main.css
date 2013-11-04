@@ -465,7 +465,20 @@ footer a:hover {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
+@media screen and (max-height: 540px) {
+    .main-content-wrap {
+        margin-top: 320px;
+        margin-bottom: 0;
+        z-index: 9999;
+    }
+    footer {
+        position: static;
+        padding-top: 24px;
+    }
+    header{
+        position: static;
+    }
+}
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }

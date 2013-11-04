@@ -27,7 +27,7 @@ else {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?php echo $nauha->title; ?> - <?=$nauha->nauhakhan->name?> | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=920, initial-scale=1">
+        <meta name="viewport" content="width=920">
 
         <?php require_once($cfg['root_dir'] . "includes/favicon.inc.php"); ?>
 

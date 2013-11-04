@@ -13,7 +13,7 @@ header("Location: nauhakhans.php");
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=920, initial-scale=1">
+        <meta name="viewport" content="width=920">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
