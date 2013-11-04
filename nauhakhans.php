@@ -13,7 +13,7 @@ require_once($cfg['root_dir'] . "includes/global.inc.php");
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Nauhakhans | Nauhas.co | Urdu Nauha Kalaam/Lyrics/Write-ups</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=920, initial-scale=1">
 
         <?php require_once($cfg['root_dir'] . "includes/favicon.inc.php"); ?>
 
