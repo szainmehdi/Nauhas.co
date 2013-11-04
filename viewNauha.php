@@ -46,7 +46,7 @@ else {
             /* viewNauhakhan.php styles */
 
             .main-content-wrap {
-                margin-top: 220px;
+                margin-top: 192px;
             }
 
             #nauha_wrap {
@@ -200,6 +200,14 @@ else {
 
             .background.background-nauhakhans  {
                 background-image: url(img/backgrounds/imam-hussain-a-s-as-414346.jpg);
+                height: 192px;
+            }
+
+            @media screen and (max-height: 640px) {
+
+                .main-content-wrap {
+                    margin-top: 0;;
+                }
             }
 
             /* AUDIO PLAYER */
