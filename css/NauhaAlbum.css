@@ -17,6 +17,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    position: relative;
+}
+.album_wrap .album_artwork .album_details {
+    position: absolute;
+    top: 216px;
+    left: 0;
+    width: 200px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #666;
+    border-left: 2px solid #ecaa20;
+    padding-left: 8px;
 }
 .album_wrap .album_content {
     width: 648px;

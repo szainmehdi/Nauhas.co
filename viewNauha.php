@@ -228,6 +228,49 @@ else {
             }
 
 
+            @media print {
+                header nav, h2, #all_nauhas, #nauha_audio {
+                    display: none;
+                }
+                header {
+                    font-family: Mplus, sans-serif;
+                    position: relative;
+                    margin: 0.25in 0.1in -0.15in 0.1in;
+
+                }
+                .background {
+                    display: none;
+                }
+                .main-content-wrap {
+                    margin: 0 auto 0 auto !important;
+                    position: relative;
+                    padding: 0;
+                }
+                #nauha_header {
+                    margin-bottom: 0 !important;
+                }
+                #nauhakhan-header {
+                    display: none !important;
+                }
+                #nauha_content p {
+
+                }
+                #nauha_content,#nauha_wrap  {
+                    width: 100% !important;
+                    height: auto !important;
+
+                }
+                h1 strong {
+                    font-weight: 400 !important;
+                }
+                body {
+                    margin: 0.25in 0.5in;
+                }
+                footer {
+                    display: none;
+                }
+            }
+
         </style>
     </head>
     <body>

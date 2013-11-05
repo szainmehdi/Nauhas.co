@@ -29,7 +29,11 @@ class NauhaAlbum {
 
     const FORMAT_FULL = '
     <div class="album_wrap">
-        <div class="album_artwork" style="background-image: url(%(artwork)s)"></div><!--
+        <div class="album_artwork" style="background-image: url(%(artwork)s)">
+            <div class="album_details">
+                %(notes)s
+            </div>
+        </div><!--
     ---><div class="album_content">
             <div class="album_heading">
                 <h3><strong>%(year_gregorian)s</strong>%(title)s</h3>
@@ -78,6 +82,7 @@ class NauhaAlbum {
         $this->year_hijri = (isset($data['year_hijri'])) ? $data['year_hijri'] : $this->year_hijri;
         $this->year_gregorian = (isset($data['year_gregorian'])) ? $data['year_gregorian'] : $this->year_gregorian;
         $this->artwork = (isset($data['artwork'])) ? $data['artwork'] : $this->artwork;
+        $this->notes = (isset($data['notes'])) ? $data['notes'] : $this->notes;
 
         //save the vehicle to the database
         return $this->save();
