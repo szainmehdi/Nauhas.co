@@ -9,6 +9,7 @@ if(!isset($_GET['n']) || !isset($_GET['id'])) {
 else {
     $n = $_GET['id'];
     $nauha = Nauha::get("id",$n);
+    $nauha->recordHit();
     if(!$nauha) {
         echo "<script>window.history.back();</script>";
         exit();

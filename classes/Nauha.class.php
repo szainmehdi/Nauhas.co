@@ -23,6 +23,8 @@ class Nauha {
     public $audio;              // Audio Array (mp3, yt, etc.)
     public $tags;               // Last Update Timestamp;
     public $contributors;       // Last Update Timestamp
+    public $hits;
+
 
     const TABLE = "nauhas";
 
@@ -55,6 +57,7 @@ class Nauha {
         $this->nauhakhan = (isset($data['nauhakhan'])) ? Nauhakhan::get("id", $data['nauhakhan']) : false;
         $this->title = (isset($data['title'])) ? $data['title'] : "";
         $this->text = (isset($data['text'])) ? $data['text'] : false;
+        $this->hits = (isset($data['hits'])) ? (int)$data['hits'] : false;
         $this->audio = (isset($data['audio'])) ? explode("|", $data['audio']) : array();
         $this->tags = (isset($data['audio'])) ? explode(",", $data['audio']) : array();
         $this->contributors = (isset($data['contributors'])) ? explode(",", $data['contributors']) : array();
@@ -74,6 +77,7 @@ class Nauha {
         $this->audio = (isset($data['audio'])) ? explode("|", $data['audio']) : $this->audio;
         $this->tags = (isset($data['audio'])) ? explode(",", $data['audio']) : $this->tags;
         $this->contributors = (isset($data['contributors'])) ? explode(",", $data['contributors']) : $this->contributors ;
+        $this->hits = (isset($data['hits'])) ? $data['hits'] : $this->hits;
 
         $this->updated = time();
 
@@ -93,6 +97,7 @@ class Nauha {
         $data = array(
             "album" => (int)$this->album,
             "nauhakhan" => (int)$this->nauhakhan->id,
+            "hits" => (int)$this->hits,
             "title" => (string)$this->title,
             "text" => (string)$this->text,
             "audio" => (string)implode("|",$this->audio),
@@ -131,7 +136,7 @@ class Nauha {
     public static function getTracksByAlbum($album) {
         $db = new Database();
         $tracklist = array();
-        foreach($db->where("album",$album)->orderBy("title")->get(self::TABLE) as $each) {
+        foreach($db->where("album",$album)->orderBy("id","ASC")->get(self::TABLE) as $each) {
             array_push($tracklist, new Nauha($each));
         }
         return $tracklist;
@@ -140,6 +145,7 @@ class Nauha {
         $album = NauhaAlbum::get("id", $this->album);
         return array(
             "album" => (int)$this->album,
+            "hits" => (int)$this->hits,
             "title" => (string)$this->title,
             "text" => (string) (strlen($this->text)>0) ? $this->text : self::ERROR_NO_WRITEUP,
             "audio" => (string)implode("|",$this->audio),
@@ -150,6 +156,10 @@ class Nauha {
             "nauhakhan_image" => (string)$this->nauhakhan->getImage(),
             "urlname" => (string)urlencode($this->title) . "&id=" . $this->id
         );
+    }
+    public function recordHit() {
+        $this->hits++;
+        return $this->save();
     }
 }
 
