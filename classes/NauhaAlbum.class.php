@@ -49,6 +49,7 @@ class NauhaAlbum {
     <a class="album_track" href="viewNauha.php?n=%(urlname)s">
         <span class="track_number">%(num)s</span>
         <span class="track_name">%(title)s</span>
+        <div class="writeup_status %(writeup_available)s"></div>
     </a>';
 
     //Default Constructor

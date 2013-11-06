@@ -79,6 +79,7 @@
 
     display: block;
     text-decoration: none;
+    position: relative;
 }
 .album_wrap .album_tracklist .album_track:hover {
     background: #fff;
@@ -97,4 +98,15 @@
 .album_wrap .album_tracklist .album_track .track_number {
     color: #999;
     margin-right: 8px;
+}
+.album_wrap .album_tracklist .album_track .writeup_status.yes {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icons/ux/writeup_available.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
 }

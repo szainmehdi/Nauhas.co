@@ -154,6 +154,7 @@ class Nauha {
             "nauhakhan" => (string)$this->nauhakhan->name,
             "year" => (string)$album->year_gregorian,
             "nauhakhan_image" => (string)$this->nauhakhan->getImage(),
+            "writeup_available" => (strlen($this->text)>0) ? "yes" : "no",
             "urlname" => (string)urlencode($this->title) . "&id=" . $this->id
         );
     }
