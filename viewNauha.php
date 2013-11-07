@@ -121,6 +121,11 @@ else {
             #nauha_wrap #nauha_content p.indent {
                 margin-left: 24px;
             }
+            #nauha_wrap #nauha_content p.repeat {
+                font-weight: 600;
+                padding-left: 8px;
+                border-left: 2px solid #ecaa20;
+            }
             #nauhakhan-header {
                 width: 320px;
                 text-align: center;
